@@ -1,42 +1,5 @@
 :root {
-  --paper: #F5F7F4;
-  --paper-raised: #FFFFFF;
-  --grid: #DCE5EE;
-  --ink: #2340A0;
-  --ink-soft: #2340A01F;
-  --red: #C8322F;
-  --red-soft: #C8322F1A;
-  --text: #1C2028;
-  --muted: #5F6773;
-  --line: #C9D2DC;
-  --shadow: 0 1px 0 #1C20280F, 0 12px 32px -12px #1C202838;
-  --cell: 24px;
-  --hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
-  --ui: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --radius-s: 8px;
-  --radius-m: 14px;
-  --radius-l: 22px;
-  --gutter: 16px;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #171B22;
-    --paper-raised: #20252E;
-    --grid: #232A35;
-    --ink: #9DB4FF;
-    --ink-soft: #9DB4FF24;
-    --red: #FF7A70;
-    --red-soft: #FF7A7022;
-    --text: #E9ECF2;
-    --muted: #9AA3B2;
-    --line: #333B48;
-    --shadow: 0 1px 0 #0000004D, 0 16px 36px -14px #000000A6;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
+  /* dark is the default; light is opt-in via the menu */
   --paper: #171B22;
   --paper-raised: #20252E;
   --grid: #232A35;
@@ -48,7 +11,28 @@
   --muted: #9AA3B2;
   --line: #333B48;
   --shadow: 0 1px 0 #0000004D, 0 16px 36px -14px #000000A6;
+  --cell: 24px;
+  --hand: "Caveat", "Segoe Print", "Bradley Hand", cursive;
+  --ui: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius-s: 8px;
+  --radius-m: 14px;
+  --radius-l: 22px;
+  --gutter: 16px;
   color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --paper: #F5F7F4;
+  --paper-raised: #FFFFFF;
+  --grid: #DCE5EE;
+  --ink: #2340A0;
+  --ink-soft: #2340A01F;
+  --red: #C8322F;
+  --red-soft: #C8322F1A;
+  --text: #1C2028;
+  --muted: #5F6773;
+  --line: #C9D2DC;
+  --shadow: 0 1px 0 #1C20280F, 0 12px 32px -12px #1C202838;
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }

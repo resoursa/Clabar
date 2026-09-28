@@ -12,6 +12,8 @@ const STRINGS = {
     confirmRematchTitle: 'Почати реванш?',
     newGame: 'Нова партія',
     switchLang: 'English',
+    lightTheme: 'Світла тема',
+    darkTheme: 'Темна тема',
     install: 'Встановити на телефон',
 
     setupTitle: 'Нова партія',
@@ -96,6 +98,8 @@ const STRINGS = {
     confirmRematchTitle: 'Start a rematch?',
     newGame: 'New game',
     switchLang: 'Українська',
+    lightTheme: 'Light theme',
+    darkTheme: 'Dark theme',
     install: 'Install on phone',
 
     setupTitle: 'New game',
@@ -450,8 +454,16 @@ function dealerIndex(game) {
 const $ = (sel, root = document) => root.querySelector(sel);
 const view = $('#view');
 
+function applyTheme() {
+  const light = store.theme === 'light';
+  if (light) document.documentElement.dataset.theme = 'light';
+  else delete document.documentElement.dataset.theme;
+  document.querySelector('meta[name="theme-color"]').content = light ? '#F5F7F4' : '#171B22';
+}
+
 function applyStatic() {
   document.documentElement.lang = lang === 'uk' ? 'uk' : 'en';
+  $('#themeItem').textContent = store.theme === 'light' ? t('darkTheme') : t('lightTheme');
   document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
 }
 
@@ -984,6 +996,11 @@ function menuAction(action) {
     if (g && g.hands.length && computeGame(g).winner === null) {
       askConfirm(t('confirmNewTitle'), t('confirmNewText'), t('confirmNewOk'), go);
     } else go();
+  } else if (action === 'theme') {
+    store.theme = store.theme === 'light' ? 'dark' : 'light';
+    save();
+    applyTheme();
+    applyStatic();
   } else if (action === 'lang') {
     lang = lang === 'uk' ? 'en' : 'uk';
     store.lang = lang;
@@ -1037,4 +1054,5 @@ if ('serviceWorker' in navigator && location.protocol !== 'file:') {
   addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 }
 
+applyTheme();
 render();

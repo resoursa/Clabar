@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Клабар</title>
   <meta name="description" content="Записник для гри в клабар: рахунок, бейти, висяки та правила.">
-  <meta name="theme-color" content="#F5F7F4" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#171B22" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#171B22">
+  <script>
+    try { if ((JSON.parse(localStorage.getItem('klabar.v1')) || {}).theme === 'light') document.documentElement.dataset.theme = 'light'; } catch (e) {}
+  </script>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Клабар">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -35,6 +37,7 @@
 
   <div class="menu" id="menu" hidden>
     <button type="button" data-action="undo" data-i18n="undo"></button>
+    <button type="button" data-action="theme" id="themeItem"></button>
     <button type="button" data-action="lang" data-i18n="switchLang"></button>
     <button type="button" data-action="install" data-i18n="install" hidden></button>
   </div>
