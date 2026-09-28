@@ -211,7 +211,7 @@ const RULES_HTML = {
       <table class="values">
         <thead><tr><th>Карта</th><th>Козир</th><th>Не козир</th></tr></thead>
         <tbody>
-          <tr><td>Мусор</td><td class="hi">20</td><td>2</td></tr>
+          <tr><td>Валет (мусор)</td><td class="hi">20</td><td>2</td></tr>
           <tr><td>Девʼятка (манела)</td><td class="hi">14</td><td>0</td></tr>
           <tr><td>Туз</td><td>11</td><td>11</td></tr>
           <tr><td>Десятка</td><td>10</td><td>10</td></tr>
@@ -220,7 +220,7 @@ const RULES_HTML = {
           <tr><td>8, 7</td><td>0</td><td>0</td></tr>
         </tbody>
       </table>
-      <p class="hint">Козирі за старшинством: мусор, манела, Т, 10, К, Д, 8, 7. Інші масті: Т, 10, К, Д, мусор, 9, 8, 7. Остання взятка дає ще 10, тож у роздачі разом 162.</p>
+      <p class="hint">Козирі за старшинством: В (мусор), 9 (манела), Т, 10, К, Д, 8, 7. Інші масті: Т, 10, К, Д, В, 9, 8, 7. Остання взятка дає ще 10, тож у роздачі разом 162.</p>
     </section>
 
     <section class="card">
@@ -287,7 +287,7 @@ const RULES_HTML = {
       <table class="values">
         <thead><tr><th>Card</th><th>Trump</th><th>Plain</th></tr></thead>
         <tbody>
-          <tr><td>Musor</td><td class="hi">20</td><td>2</td></tr>
+          <tr><td>Jack (musor)</td><td class="hi">20</td><td>2</td></tr>
           <tr><td>Nine (menel)</td><td class="hi">14</td><td>0</td></tr>
           <tr><td>Ace</td><td>11</td><td>11</td></tr>
           <tr><td>Ten</td><td>10</td><td>10</td></tr>
@@ -296,7 +296,7 @@ const RULES_HTML = {
           <tr><td>8, 7</td><td>0</td><td>0</td></tr>
         </tbody>
       </table>
-      <p class="hint">Trump rank: musor, menel, A, 10, K, Q, 8, 7. Plain suits: A, 10, K, Q, musor, 9, 8, 7. The last trick adds 10, so each hand holds 162 in total.</p>
+      <p class="hint">Trump rank: J (musor), 9 (menel), A, 10, K, Q, 8, 7. Plain suits: A, 10, K, Q, J, 9, 8, 7. The last trick adds 10, so each hand holds 162 in total.</p>
     </section>
 
     <section class="card">

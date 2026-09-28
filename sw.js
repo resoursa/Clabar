@@ -1,4 +1,4 @@
-const VERSION = 'klabar-v5';
+const VERSION = 'klabar-v6';
 const SHELL = [
   './',
   'index.html',
