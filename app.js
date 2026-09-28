@@ -185,7 +185,16 @@ const RULES_HTML = {
     <section class="card">
       <h2>Колода і гравці</h2>
       <p>32 карти: від сімки до туза. Грають удвох, утрьох або пара на пару (партнери сидять навпроти).</p>
-      <p>Кожному по 6 карт (по дві за раз), наступну карту відкривають — це пропонований козир. Після торгу докладають ще по 3 карти (по 2, якщо грають учотирьох).</p>
+      <p>Спочатку кожному по 6 карт (по дві за раз), наступну карту відкривають — це пропонований козир. Після торгу докладають ще карти:</p>
+      <table class="values">
+        <thead><tr><th>Гравців</th><th>Спочатку</th><th>Після торгу</th><th>У руці</th></tr></thead>
+        <tbody>
+          <tr><td>2</td><td>6</td><td>+3</td><td class="hi">9</td></tr>
+          <tr><td>3</td><td>6</td><td>+3</td><td class="hi">9</td></tr>
+          <tr><td>4</td><td>6</td><td>+2</td><td class="hi">8</td></tr>
+        </tbody>
+      </table>
+      <p class="hint">Учотирьох розходиться вся колода. Удвох і втрьох решта карт лишається в прикупі й у гру не йде.</p>
     </section>
 
     <section class="card">
@@ -202,7 +211,7 @@ const RULES_HTML = {
       <table class="values">
         <thead><tr><th>Карта</th><th>Козир</th><th>Не козир</th></tr></thead>
         <tbody>
-          <tr><td>Валет (джек)</td><td class="hi">20</td><td>2</td></tr>
+          <tr><td>Мусор</td><td class="hi">20</td><td>2</td></tr>
           <tr><td>Девʼятка (манела)</td><td class="hi">14</td><td>0</td></tr>
           <tr><td>Туз</td><td>11</td><td>11</td></tr>
           <tr><td>Десятка</td><td>10</td><td>10</td></tr>
@@ -211,7 +220,7 @@ const RULES_HTML = {
           <tr><td>8, 7</td><td>0</td><td>0</td></tr>
         </tbody>
       </table>
-      <p class="hint">Козирі за старшинством: В, 9, Т, 10, К, Д, 8, 7. Інші масті: Т, 10, К, Д, В, 9, 8, 7. Остання взятка дає ще 10, тож у роздачі разом 162.</p>
+      <p class="hint">Козирі за старшинством: мусор, манела, Т, 10, К, Д, 8, 7. Інші масті: Т, 10, К, Д, мусор, 9, 8, 7. Остання взятка дає ще 10, тож у роздачі разом 162.</p>
     </section>
 
     <section class="card">
@@ -252,7 +261,16 @@ const RULES_HTML = {
     <section class="card">
       <h2>Deck and players</h2>
       <p>32 cards, seven to ace. Play with two, three, or two pairs (partners sit opposite each other).</p>
-      <p>Everyone gets 6 cards (two at a time), then the next card is turned up as the proposed trump. After bidding, everyone gets 3 more cards (2 with four players).</p>
+      <p>Everyone first gets 6 cards (two at a time), then the next card is turned up as the proposed trump. After bidding, more cards are dealt:</p>
+      <table class="values">
+        <thead><tr><th>Players</th><th>First deal</th><th>After bidding</th><th>In hand</th></tr></thead>
+        <tbody>
+          <tr><td>2</td><td>6</td><td>+3</td><td class="hi">9</td></tr>
+          <tr><td>3</td><td>6</td><td>+3</td><td class="hi">9</td></tr>
+          <tr><td>4</td><td>6</td><td>+2</td><td class="hi">8</td></tr>
+        </tbody>
+      </table>
+      <p class="hint">With four players the whole deck is dealt. With two or three, the remaining cards stay face down and are not played.</p>
     </section>
 
     <section class="card">
@@ -269,7 +287,7 @@ const RULES_HTML = {
       <table class="values">
         <thead><tr><th>Card</th><th>Trump</th><th>Plain</th></tr></thead>
         <tbody>
-          <tr><td>Jack</td><td class="hi">20</td><td>2</td></tr>
+          <tr><td>Musor</td><td class="hi">20</td><td>2</td></tr>
           <tr><td>Nine (menel)</td><td class="hi">14</td><td>0</td></tr>
           <tr><td>Ace</td><td>11</td><td>11</td></tr>
           <tr><td>Ten</td><td>10</td><td>10</td></tr>
@@ -278,7 +296,7 @@ const RULES_HTML = {
           <tr><td>8, 7</td><td>0</td><td>0</td></tr>
         </tbody>
       </table>
-      <p class="hint">Trump rank: J, 9, A, 10, K, Q, 8, 7. Plain suits: A, 10, K, Q, J, 9, 8, 7. The last trick adds 10, so each hand holds 162 in total.</p>
+      <p class="hint">Trump rank: musor, menel, A, 10, K, Q, 8, 7. Plain suits: A, 10, K, Q, musor, 9, 8, 7. The last trick adds 10, so each hand holds 162 in total.</p>
     </section>
 
     <section class="card">
