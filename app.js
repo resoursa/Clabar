@@ -8,6 +8,8 @@ const STRINGS = {
     menu: 'Меню',
     undo: 'Скасувати останню роздачу',
     rematch: 'Реванш тим самим складом',
+    rematchShort: 'Реванш',
+    confirmRematchTitle: 'Почати реванш?',
     newGame: 'Нова партія',
     switchLang: 'English',
     install: 'Встановити на телефон',
@@ -90,6 +92,8 @@ const STRINGS = {
     menu: 'Menu',
     undo: 'Undo last hand',
     rematch: 'Rematch, same players',
+    rematchShort: 'Rematch',
+    confirmRematchTitle: 'Start a rematch?',
     newGame: 'New game',
     switchLang: 'Українська',
     install: 'Install on phone',
@@ -638,6 +642,11 @@ function renderGame() {
     </div>
     ${res.pot ? `<p class="pot">${t('potHangs', res.pot)}</p>` : ''}
     ${winnerBlock}
+    ${res.winner === null ? `
+      <div class="game-actions">
+        <button class="btn btn-ghost" type="button" data-go="rematch">${t('rematchShort')}</button>
+        <button class="btn btn-ghost" type="button" data-go="new">${t('newGame')}</button>
+      </div>` : ''}
     ${res.winner === null ? `<div class="dock"><button class="btn" type="button" id="addHand">＋ ${t('recordHand')}</button></div>` : ''}
   `;
 
@@ -927,7 +936,6 @@ function toggleMenu(open = menu.hidden) {
   if (open) {
     const g = store.game;
     menu.querySelector('[data-action="undo"]').disabled = !g || !g.hands.length;
-    menu.querySelector('[data-action="rematch"]').disabled = !g;
     menu.querySelector('[data-action="install"]').hidden = !deferredInstall;
     menu.querySelector('button:not([disabled]):not([hidden])').focus();
   }
@@ -954,6 +962,13 @@ function menuAction(action) {
     render();
   } else if (action === 'rematch') {
     if (!g) return;
+    if (g.hands.length && computeGame(g).winner === null) {
+      askConfirm(t('confirmRematchTitle'), t('confirmNewText'), t('rematchShort'), () => {
+        g.hands = [];
+        menuAction('rematch');
+      });
+      return;
+    }
     startGame({
       mode: g.mode,
       names: g.players,

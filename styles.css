@@ -374,6 +374,13 @@ button.sheet-row:hover { background: var(--ink-soft); }
   font-size: 15px;
 }
 
+.game-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.game-actions .btn { flex: 1; min-height: 44px; font-size: 15px; padding: 0 14px; }
+
 .empty {
   padding: 28px 12px 8px 56px;
   color: var(--muted);
