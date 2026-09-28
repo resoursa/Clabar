@@ -54,7 +54,7 @@ const STRINGS = {
     trump: 'Козир',
     optional: 'необовʼязково',
     trickPoints: 'Очки за взятки',
-    trickHint: 'Разом з останньою взяткою 162. Останнє поле заповниться саме.',
+    trickHint: 'Разом з останньою взяткою (послед) 162. Останнє поле заповниться саме.',
     sum: 'Сума',
     of: 'з',
     melds: 'Комбінації',
@@ -140,7 +140,7 @@ const STRINGS = {
     trump: 'Trump',
     optional: 'optional',
     trickPoints: 'Trick points',
-    trickHint: 'Including the last trick the total is 162. The last box fills itself.',
+    trickHint: 'Including the last trick (posled) the total is 162. The last box fills itself.',
     sum: 'Total',
     of: 'of',
     melds: 'Melds',
@@ -220,7 +220,7 @@ const RULES_HTML = {
           <tr><td>8, 7</td><td>0</td><td>0</td></tr>
         </tbody>
       </table>
-      <p class="hint">Козирі за старшинством: В (мусор), 9 (манела), Т, 10, К, Д, 8, 7. Інші масті: Т, 10, К, Д, В, 9, 8, 7. Остання взятка дає ще 10, тож у роздачі разом 162.</p>
+      <p class="hint">Козирі за старшинством: В (мусор), 9 (манела), Т, 10, К, Д, 8, 7. Інші масті: Т, 10, К, Д, В, 9, 8, 7. Остання взятка (послед) дає ще 10, тож у роздачі разом 162.</p>
     </section>
 
     <section class="card">
@@ -238,7 +238,7 @@ const RULES_HTML = {
         <div class="combo-item"><span><span class="term">Терц</span> — три карти однієї масті підряд</span><b>20</b></div>
         <div class="combo-item"><span><span class="term">Полтина</span> — чотири карти підряд</span><b>50</b></div>
         <div class="combo-item"><span><span class="term">Белла</span> — козирні король і дама</span><b>20</b></div>
-        <div class="combo-item"><span><span class="term">Остання взятка</span></span><b>10</b></div>
+        <div class="combo-item"><span><span class="term">Остання взятка (послед)</span></span><b>10</b></div>
       </div>
       <p class="hint">Комбінації оголошують на першому ході. Зараховується лише у того, в кого старша: полтина старша за терц, серед рівних — за старшою картою, при повній рівності — козирна. Беллу оголошують, коли кладуть короля чи даму козиря.</p>
     </section>
@@ -296,7 +296,7 @@ const RULES_HTML = {
           <tr><td>8, 7</td><td>0</td><td>0</td></tr>
         </tbody>
       </table>
-      <p class="hint">Trump rank: J (musor), 9 (menel), A, 10, K, Q, 8, 7. Plain suits: A, 10, K, Q, J, 9, 8, 7. The last trick adds 10, so each hand holds 162 in total.</p>
+      <p class="hint">Trump rank: J (musor), 9 (menel), A, 10, K, Q, 8, 7. Plain suits: A, 10, K, Q, J, 9, 8, 7. The last trick (posled) adds 10, so each hand holds 162 in total.</p>
     </section>
 
     <section class="card">
@@ -314,7 +314,7 @@ const RULES_HTML = {
         <div class="combo-item"><span><span class="term">Tierce</span> — three cards in a row, same suit</span><b>20</b></div>
         <div class="combo-item"><span><span class="term">Fifty</span> — four cards in a row</span><b>50</b></div>
         <div class="combo-item"><span><span class="term">Bella</span> — king and queen of trump</span><b>20</b></div>
-        <div class="combo-item"><span><span class="term">Last trick</span></span><b>10</b></div>
+        <div class="combo-item"><span><span class="term">Last trick (posled)</span></span><b>10</b></div>
       </div>
       <p class="hint">Melds are declared on the first trick. Only the player with the best one scores: a fifty beats a tierce, equal lengths compare by top card, and on a full tie the trump meld wins. Bella is announced when the king or queen of trump is played.</p>
     </section>
