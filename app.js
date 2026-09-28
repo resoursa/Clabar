@@ -632,8 +632,15 @@ function renderGame() {
 
   view.innerHTML = `
     <div class="game-head">
-      <span><strong>${t('to')} ${g.target}</strong></span>
-      ${res.winner === null ? `<span>${t('dealsNow')}: <span class="dealer-now">${esc(dealer)}</span></span>` : ''}
+      <div class="game-meta">
+        <strong>${t('to')} ${g.target}</strong>
+        ${res.winner === null ? `<span>${t('dealsNow')}: <span class="dealer-now">${esc(dealer)}</span></span>` : ''}
+      </div>
+      ${res.winner === null ? `
+        <div class="game-top-actions">
+          <button class="chip-btn" type="button" data-go="rematch">${t('rematchShort')}</button>
+          <button class="chip-btn" type="button" data-go="new">${t('newGame')}</button>
+        </div>` : ''}
     </div>
     <div class="scoresheet">
       ${head}
@@ -642,11 +649,6 @@ function renderGame() {
     </div>
     ${res.pot ? `<p class="pot">${t('potHangs', res.pot)}</p>` : ''}
     ${winnerBlock}
-    ${res.winner === null ? `
-      <div class="game-actions">
-        <button class="btn btn-ghost" type="button" data-go="rematch">${t('rematchShort')}</button>
-        <button class="btn btn-ghost" type="button" data-go="new">${t('newGame')}</button>
-      </div>` : ''}
     ${res.winner === null ? `<div class="dock"><button class="btn" type="button" id="addHand">＋ ${t('recordHand')}</button></div>` : ''}
   `;
 
